@@ -6,3 +6,5 @@ while stack:
     result += stack.pop()
     
 print("Reversed string:",result)
+
+print(result)
