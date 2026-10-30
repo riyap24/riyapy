@@ -1,0 +1,22 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+head = Node(10)
+head.next = Node(30)
+
+new_node = Node(20)
+position = 2
+
+current = head
+
+for i in range(position - 2):
+    current = current.next
+
+new_node.next = current.next
+current.next = new_node
+
+while head:
+    print(head.data, end=" -> ")
+    head = head.next
